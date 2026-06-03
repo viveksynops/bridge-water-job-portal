@@ -11,7 +11,7 @@ export function SuccessRateSection() {
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const }}
       >
         <h2 className="max-w-[38rem] text-[2.25rem] font-semibold leading-[1.15] sm:text-[2.5rem]">
           Verixa Increases Your Job Success Rate
@@ -43,7 +43,7 @@ export function SuccessRateSection() {
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const }}
         className="relative min-h-[43rem]"
       >
         <div className="absolute right-0 top-0 h-full w-[84%] overflow-hidden rounded-[1.15rem]">

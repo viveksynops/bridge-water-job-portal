@@ -31,7 +31,7 @@ const container = {
 
 const cardItem = {
   hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const } },
 }
 
 export function TestimonialsSection() {
@@ -41,7 +41,7 @@ export function TestimonialsSection() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
-        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const }}
         className="max-w-[44rem]"
       >
         <h2 className="text-[2.25rem] font-semibold leading-[1.15] sm:text-[2.5rem]">

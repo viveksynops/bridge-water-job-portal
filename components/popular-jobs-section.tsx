@@ -35,7 +35,7 @@ const listContainer = {
 
 const cardItem = {
   hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const } },
 }
 
 export function PopularJobsSection() {
@@ -46,7 +46,7 @@ export function PopularJobsSection() {
           initial={{ opacity: 0, x: -32 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const }}
           className="self-start rounded-[1.45rem] bg-[linear-gradient(135deg,oklch(0.68_0.22_31)_0%,oklch(0.86_0.13_78)_56%,oklch(0.47_0.11_108)_100%)] p-8 sm:p-12 lg:p-10 xl:p-16"
         >
           <div className="relative aspect-[0.925] overflow-hidden rounded-[1.05rem] border border-background/80">

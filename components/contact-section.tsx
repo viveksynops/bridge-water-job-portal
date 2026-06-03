@@ -15,7 +15,7 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as const }}
           className="grid min-h-[40rem] grid-cols-1 gap-12 overflow-hidden rounded-[1.4rem] bg-background px-14 py-16 lg:grid-cols-[0.82fr_1fr]"
         >
           <div className="relative flex flex-col">
