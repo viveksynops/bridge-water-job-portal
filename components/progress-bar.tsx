@@ -1,10 +1,20 @@
+'use client'
+
+import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
+
 export function ProgressBar({ value, className = "" }: { value: number; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref, { once: true, margin: '-40px' })
+
   return (
-    <div className="h-[1.38rem] overflow-hidden rounded-full bg-muted">
-      <div
+    <div ref={ref} className="h-[1.38rem] overflow-hidden rounded-full bg-muted">
+      <motion.div
         className={`h-full rounded-full bg-foreground ${className}`}
-        style={{ width: `${value}%` }}
+        initial={{ width: 0 }}
+        animate={{ width: isInView ? `${value}%` : '0%' }}
+        transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
       />
     </div>
-  );
+  )
 }

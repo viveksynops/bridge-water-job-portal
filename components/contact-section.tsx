@@ -1,14 +1,23 @@
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+'use client'
+
+import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
 
 export function ContactSection() {
   return (
     <section className="bg-[linear-gradient(135deg,oklch(0.68_0.22_31)_0%,oklch(0.86_0.13_78)_57%,oklch(0.47_0.11_108)_100%)] px-6 py-20 sm:px-10 lg:px-28">
       <div className="mx-auto w-full max-w-[105rem]">
-        <div className="grid min-h-[40rem] grid-cols-1 gap-12 overflow-hidden rounded-[1.4rem] bg-background px-14 py-16 lg:grid-cols-[0.82fr_1fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          className="grid min-h-[40rem] grid-cols-1 gap-12 overflow-hidden rounded-[1.4rem] bg-background px-14 py-16 lg:grid-cols-[0.82fr_1fr]"
+        >
           <div className="relative flex flex-col">
             <div className="pointer-events-none absolute -bottom-44 -left-64 size-[54rem] rounded-full border-[4.5rem] border-muted/45" />
             <div className="relative z-10 max-w-[38rem]">
@@ -85,8 +94,8 @@ export function ContactSection() {
               />
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
-  );
+  )
 }

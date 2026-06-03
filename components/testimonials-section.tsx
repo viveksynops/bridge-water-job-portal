@@ -1,30 +1,49 @@
-import Image from "next/image";
+'use client'
+
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const testimonials = [
   {
-    name: "Sarah Thompson",
+    name: 'Sarah Thompson',
     quote:
-      "Verixa offers great tools for tracking applicants and organising interviews. It has made our recruitment process smoother and more organised.",
-    image: "/images/testimonial-sarah.png",
+      'Verixa offers great tools for tracking applicants and organising interviews. It has made our recruitment process smoother and more organised.',
+    image: '/images/testimonial-sarah.png',
   },
   {
-    name: "Steve kal",
+    name: 'Steve kal',
     quote:
       "Verixa's job alerts kept me updated with relevant positions daily. I finally landed a role that perfectly matches my skills and aspirations.",
-    image: "/images/testimonial-steve.png",
+    image: '/images/testimonial-steve.png',
   },
   {
-    name: "Lee Atkins",
+    name: 'Lee Atkins',
     quote:
-      "Verixa offers great tools for tracking applicants and organizing interviews. It has made our recruitment process smoother and more organized.",
-    image: "/images/testimonial-lee.png",
+      'Verixa offers great tools for tracking applicants and organizing interviews. It has made our recruitment process smoother and more organized.',
+    image: '/images/testimonial-lee.png',
   },
-];
+]
+
+const container = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+}
+
+const cardItem = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } },
+}
 
 export function TestimonialsSection() {
   return (
     <section className="mx-auto w-full max-w-[105rem] bg-background px-6 py-24 sm:px-10 lg:px-28">
-      <div className="max-w-[44rem]">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-60px' }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        className="max-w-[44rem]"
+      >
         <h2 className="text-[2.25rem] font-semibold leading-[1.15] sm:text-[2.5rem]">
           Insight From Our Users
         </h2>
@@ -32,12 +51,19 @@ export function TestimonialsSection() {
           Highlighting authentic testimonials from users who found success with
           Verixa.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-60px' }}
+        className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3"
+      >
         {testimonials.map((testimonial) => (
-          <article
+          <motion.article
             key={testimonial.name}
+            variants={cardItem}
             className="relative min-h-[31rem] overflow-hidden rounded-[1.15rem]"
           >
             <Image
@@ -56,9 +82,9 @@ export function TestimonialsSection() {
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
             </div>
-          </article>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
-  );
+  )
 }
