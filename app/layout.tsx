@@ -28,9 +28,7 @@ export default function RootLayout({
       lang="en"
       className={`${interDisplay.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <div className="w-full px-6 sm:px-10 lg:px-28">{children}</div>
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

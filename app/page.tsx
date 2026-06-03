@@ -263,7 +263,7 @@ function UploadMockup() {
 
 function ProcessSection() {
   return (
-    <section className="mx-auto w-full max-w-[105rem] pb-36 pt-28">
+    <section className="mx-auto w-full max-w-[105rem] px-6 pb-36 pt-28 sm:px-10 lg:px-28">
       <div className="mx-auto max-w-[52rem] text-center">
         <h2 className="text-[3.125rem] font-semibold leading-[1.25] tracking-[-0.02em]">
           A Smooth Process With Outstanding Results
@@ -307,7 +307,7 @@ function ProcessSection() {
 
 function PopularJobsSection() {
   return (
-    <section className="mx-auto w-full max-w-[105rem] bg-muted/35 pb-20 pt-32">
+    <section className="mx-auto w-full max-w-[105rem] bg-muted/35 px-6 pb-20 pt-32 sm:px-10 lg:px-28">
       <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_0.72fr]">
         <h2 className="max-w-[44rem] text-[3.125rem] font-semibold leading-[1.25] tracking-[-0.02em]">
           The Most Popular Jobs Are Listed Below
@@ -406,7 +406,7 @@ function SuccessRateCard() {
 
 function SuccessRateSection() {
   return (
-    <section className="mx-auto grid w-full max-w-[105rem] grid-cols-1 items-center gap-16 bg-background py-32 lg:grid-cols-[0.88fr_1fr]">
+    <section className="mx-auto grid w-full max-w-[105rem] grid-cols-1 items-center gap-16 bg-background px-6 py-32 sm:px-10 lg:grid-cols-[0.88fr_1fr] lg:px-28">
       <div>
         <h2 className="max-w-[43rem] text-[3.125rem] font-semibold leading-[1.25] tracking-[-0.02em]">
           Verixa Increases Your Job Success Rate
@@ -459,7 +459,7 @@ function SuccessRateSection() {
 function CompaniesSection() {
   return (
     <section className="bg-foreground py-32 text-background">
-      <div className="mx-auto grid w-full max-w-[105rem] grid-cols-1 items-center gap-20 lg:grid-cols-[1.04fr_0.96fr]">
+      <div className="mx-auto grid w-full max-w-[105rem] grid-cols-1 items-center gap-20 px-6 sm:px-10 lg:grid-cols-[1.04fr_0.96fr] lg:px-28">
         <div className="relative min-h-[43rem]">
           <div className="absolute left-0 top-0 h-full w-[84%] overflow-hidden rounded-[1.15rem]">
             <Image
@@ -532,7 +532,7 @@ function CompaniesSection() {
 
 function TestimonialsSection() {
   return (
-    <section className="mx-auto w-full max-w-[105rem] bg-background py-32">
+    <section className="mx-auto w-full max-w-[105rem] bg-background px-6 py-32 sm:px-10 lg:px-28">
       <div className="max-w-[44rem]">
         <h2 className="text-[3.125rem] font-semibold leading-[1.25] tracking-[-0.02em]">
           Insight From Our Users
@@ -574,7 +574,7 @@ function TestimonialsSection() {
 
 function ContactSection() {
   return (
-    <section className="mx-[calc(50%-50vw)] bg-[linear-gradient(135deg,oklch(0.68_0.22_31)_0%,oklch(0.86_0.13_78)_57%,oklch(0.47_0.11_108)_100%)] py-20">
+    <section className="bg-[linear-gradient(135deg,oklch(0.68_0.22_31)_0%,oklch(0.86_0.13_78)_57%,oklch(0.47_0.11_108)_100%)] px-6 py-20 sm:px-10 lg:px-28">
       <div className="mx-auto w-full max-w-[105rem]">
         <div className="grid min-h-[47rem] grid-cols-1 gap-16 overflow-hidden rounded-[1.4rem] bg-background px-20 py-24 lg:grid-cols-[0.82fr_1fr]">
           <div className="relative flex flex-col">
@@ -676,7 +676,7 @@ const footerColumns = [
 
 function FooterSection() {
   return (
-    <footer className="relative mx-auto w-full max-w-[105rem] overflow-hidden bg-background pb-20 pt-32">
+    <footer className="relative mx-auto w-full max-w-[105rem] overflow-hidden bg-background px-6 pb-20 pt-32 sm:px-10 lg:px-28">
       <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_0.34fr]">
         <div>
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.45fr_1fr_1fr_1fr]">
@@ -744,7 +744,7 @@ function FooterSection() {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="mx-auto flex w-full max-w-[105rem] items-center justify-between py-5">
+      <header className="mx-auto flex w-full max-w-[105rem] items-center justify-between px-6 py-5 sm:px-10 lg:px-28">
         <LogoMark />
 
         <nav
@@ -771,7 +771,7 @@ export default function Home() {
         </Button>
       </header>
 
-      <section className="mx-auto flex w-full max-w-[68rem] flex-col items-center pb-20 pt-14 text-center lg:pb-16 lg:pt-14">
+      <section className="mx-auto flex w-full max-w-[68rem] flex-col items-center px-6 pb-20 pt-14 text-center sm:px-10 lg:pb-16 lg:pt-14 lg:px-28">
         <Badge
           variant="secondary"
           className="h-12 rounded-full px-5 text-base font-normal leading-[1.4] tracking-[-0.01em] text-muted-foreground"
@@ -800,7 +800,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-[105rem] grid-cols-1 gap-5 pb-8 lg:grid-cols-[1.38fr_1fr_1fr]">
+      <section className="mx-auto grid w-full max-w-[105rem] grid-cols-1 gap-5 px-6 pb-8 sm:px-10 lg:grid-cols-[1.38fr_1fr_1fr] lg:px-28">
         <div className="relative min-h-[32rem] overflow-hidden rounded-[1.15rem] lg:row-span-2 lg:min-h-[46rem]">
           <Image
             src="/images/candidate-workspace.png"
