@@ -149,6 +149,7 @@
   html {
     @apply font-sans;
     font-optical-sizing: auto;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;

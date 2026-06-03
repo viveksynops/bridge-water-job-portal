@@ -41,7 +41,19 @@ const cardItem = {
 export function PopularJobsSection() {
   return (
     <section className="w-full bg-muted/35 px-6 py-16 sm:px-10 lg:px-28">
-      <div className="mx-auto grid w-full max-w-[105rem] grid-cols-1 gap-10 lg:grid-cols-[0.89fr_1.11fr] xl:gap-12">
+      <div className="mx-auto w-full max-w-[105rem]">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_0.72fr]">
+          <h2 className="max-w-[43rem] text-[2.75rem] font-semibold leading-[1.16] sm:text-[3.75rem]">
+            The Most Popular Jobs Are Listed Below
+          </h2>
+          <p className="max-w-[34rem] justify-self-start pt-4 text-base leading-[1.45] text-foreground sm:text-xl lg:justify-self-end lg:pt-8">
+            Explore some of the most in-demand positions currently available on
+            our platform.
+          </p>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-16 grid w-full max-w-[105rem] grid-cols-1 gap-10 lg:grid-cols-[0.89fr_1.11fr] xl:gap-12">
         <motion.div
           initial={{ opacity: 0, x: -32 }}
           whileInView={{ opacity: 1, x: 0 }}
