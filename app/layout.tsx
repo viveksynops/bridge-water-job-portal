@@ -5,6 +5,7 @@ import "./globals.css";
 const interDisplay = Inter({
   variable: "--font-inter-display",
   subsets: ["latin"],
+  axes: ["opsz"],
 });
 
 const geistMono = Geist_Mono({

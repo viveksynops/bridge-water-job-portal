@@ -1,8 +1,8 @@
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/logo-mark";
 
-const navItems = ["Home", "About", "Case Studies", "Pages", "Service"];
+const navItems = ["Home", "Jobs", "Companies", "Employers", "Contact"];
 
 export function SiteHeader() {
   return (
@@ -22,7 +22,6 @@ export function SiteHeader() {
             }`}
           >
             {item}
-            {item === "Pages" ? <ChevronDown data-icon="inline-end" /> : null}
           </a>
         ))}
       </nav>
