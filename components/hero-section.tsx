@@ -11,7 +11,7 @@ export function HeroSection() {
       >
         Global Job Finder Plus Portal
       </Badge>
-      <h1 className="mt-8 max-w-[60rem] text-[2.75rem] font-semibold leading-[1.12] sm:text-[3.5rem]">
+      <h1 className="mt-8 max-w-[68rem] text-[3.25rem] font-semibold leading-[1.08] sm:text-[4.5rem]">
         Connecting top talent with leading opportunities
       </h1>
       <p className="mt-5 max-w-[40rem] text-base leading-[1.45] text-muted-foreground sm:text-lg">

@@ -17,8 +17,8 @@ const footerColumns = [
 
 export function FooterSection() {
   return (
-    <footer className="relative mx-auto w-full max-w-[105rem] overflow-hidden bg-background px-6 pb-16 pt-24 sm:px-10 lg:px-28">
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_0.34fr]">
+    <footer className="relative mx-auto w-full max-w-[105rem] overflow-hidden bg-background px-6 pb-12 pt-16 sm:px-10 lg:px-28">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_0.34fr]">
         <div>
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.45fr_1fr_1fr_1fr]">
             <p className="max-w-[31rem] text-lg leading-[1.45]">
@@ -48,7 +48,7 @@ export function FooterSection() {
 
         </div>
 
-        <div className="relative min-h-[29rem] overflow-hidden rounded-[1.15rem]">
+        <div className="relative min-h-[22rem] overflow-hidden rounded-[1.15rem]">
           <Image
             src="/images/footer-workspace.png"
             alt="Professional working on a laptop"
